@@ -118,12 +118,16 @@ wp core install --url="http://localhost" --title="$sitename" --admin_user="$wpus
 #
 #
 rm readme.html
-
+wp theme install https://downloads.wordpress.org/theme/cista.1.0.zip --activate --allow-root
 wp theme delete twentyfifteen --allow-root
 wp theme delete twentyfourteen --allow-root
+wp theme delete twentysixteen --allow-root
 
 wp plugin delete akismet --allow-root
 wp plugin delete hello --allow-root
+
+wp plugin install duplicator --allow-root
+wp plugin install wordfence --allow-root
 
 
 echo -e "----------------------------------------"
